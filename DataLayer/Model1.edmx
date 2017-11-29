@@ -1,0 +1,1073 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="bazaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="aktivnosti">
+          <Key>
+            <PropertyRef Name="id_aktivnosti" />
+          </Key>
+          <Property Name="id_aktivnosti" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_korisnik" Type="int" Nullable="false" />
+          <Property Name="mess" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="datum" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="autor">
+          <Key>
+            <PropertyRef Name="id_autor" />
+          </Key>
+          <Property Name="id_autor" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="prezime" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="biografija" Type="text" Nullable="false" />
+        </EntityType>
+        <EntityType Name="cena">
+          <Key>
+            <PropertyRef Name="id_cena" />
+          </Key>
+          <Property Name="id_cena" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_knjiga" Type="int" Nullable="false" />
+          <Property Name="cena" Type="int" Nullable="false" />
+          <Property Name="datum" Type="date" Nullable="false" />
+        </EntityType>
+        <EntityType Name="knjiga">
+          <Key>
+            <PropertyRef Name="id_knjiga" />
+          </Key>
+          <Property Name="id_knjiga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_autor" Type="int" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="slika" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="godina" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="opis" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="slikaMala" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="komentar">
+          <Key>
+            <PropertyRef Name="id_komentar" />
+          </Key>
+          <Property Name="id_komentar" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_korisnik" Type="int" Nullable="false" />
+          <Property Name="id_knjiga" Type="int" Nullable="false" />
+          <Property Name="komentar" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="kontakt">
+          <Key>
+            <PropertyRef Name="id_kontakt" />
+          </Key>
+          <Property Name="id_kontakt" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ime" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="naslov" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="poruka" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="korisnik">
+          <Key>
+            <PropertyRef Name="id_korisnik" />
+          </Key>
+          <Property Name="id_korisnik" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_uloga" Type="int" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="pass" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="email" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="korpa">
+          <Key>
+            <PropertyRef Name="id_korpa" />
+          </Key>
+          <Property Name="id_korpa" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_korisnik" Type="int" Nullable="false" />
+          <Property Name="id_knjiga" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="meni">
+          <Key>
+            <PropertyRef Name="id_meni" />
+          </Key>
+          <Property Name="id_meni" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naslov" Type="varchar" MaxLength="255" Nullable="false" />
+          <Property Name="url" Type="varchar" MaxLength="255" />
+        </EntityType>
+        <EntityType Name="meniuloga">
+          <Key>
+            <PropertyRef Name="id_meniuloga" />
+          </Key>
+          <Property Name="id_meniuloga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_meni" Type="int" />
+          <Property Name="uloga" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="ocena">
+          <Key>
+            <PropertyRef Name="id_ocena" />
+          </Key>
+          <Property Name="id_ocena" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_knjiga" Type="int" Nullable="false" />
+          <Property Name="id_korisnik" Type="int" Nullable="false" />
+          <Property Name="ocena" Type="real" Nullable="false" />
+        </EntityType>
+        <EntityType Name="uloga">
+          <Key>
+            <PropertyRef Name="id_uloga" />
+          </Key>
+          <Property Name="id_uloga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="zanr">
+          <Key>
+            <PropertyRef Name="id_zanr" />
+          </Key>
+          <Property Name="id_zanr" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="naziv" Type="varchar" MaxLength="255" Nullable="false" />
+        </EntityType>
+        <EntityType Name="zanrKnjiga">
+          <Key>
+            <PropertyRef Name="id_zanrKnjiga" />
+          </Key>
+          <Property Name="id_zanrKnjiga" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_zanr" Type="int" Nullable="false" />
+          <Property Name="id_knjiga" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="aktivnosti_fk0">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="aktivnosti" Type="Self.aktivnosti" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="aktivnosti">
+              <PropertyRef Name="id_korisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="cena_fk0">
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="1" />
+          <End Role="cena" Type="Self.cena" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="knjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Principal>
+            <Dependent Role="cena">
+              <PropertyRef Name="id_knjiga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="knjiga_fk0">
+          <End Role="autor" Type="Self.autor" Multiplicity="1" />
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="autor">
+              <PropertyRef Name="id_autor" />
+            </Principal>
+            <Dependent Role="knjiga">
+              <PropertyRef Name="id_autor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="komentar_fk0">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="komentar" Type="Self.komentar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="komentar">
+              <PropertyRef Name="id_korisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="komentar_fk1">
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="1" />
+          <End Role="komentar" Type="Self.komentar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="knjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Principal>
+            <Dependent Role="komentar">
+              <PropertyRef Name="id_knjiga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="korisnik_fk0">
+          <End Role="uloga" Type="Self.uloga" Multiplicity="1" />
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="uloga">
+              <PropertyRef Name="id_uloga" />
+            </Principal>
+            <Dependent Role="korisnik">
+              <PropertyRef Name="id_uloga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="korpa_fk0">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="korpa" Type="Self.korpa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="korpa">
+              <PropertyRef Name="id_korisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="korpa_fk1">
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="1" />
+          <End Role="korpa" Type="Self.korpa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="knjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Principal>
+            <Dependent Role="korpa">
+              <PropertyRef Name="id_knjiga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="mu_fk0">
+          <End Role="meni" Type="Self.meni" Multiplicity="0..1" />
+          <End Role="meniuloga" Type="Self.meniuloga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="meni">
+              <PropertyRef Name="id_meni" />
+            </Principal>
+            <Dependent Role="meniuloga">
+              <PropertyRef Name="id_meni" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ocena_fk1">
+          <End Role="korisnik" Type="Self.korisnik" Multiplicity="1" />
+          <End Role="ocena" Type="Self.ocena" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="ocena">
+              <PropertyRef Name="id_korisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="zanrKnjiga_fk0">
+          <End Role="zanr" Type="Self.zanr" Multiplicity="1" />
+          <End Role="zanrKnjiga" Type="Self.zanrKnjiga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zanr">
+              <PropertyRef Name="id_zanr" />
+            </Principal>
+            <Dependent Role="zanrKnjiga">
+              <PropertyRef Name="id_zanr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="zanrKnjiga_fk1">
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="1" />
+          <End Role="zanrKnjiga" Type="Self.zanrKnjiga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="knjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Principal>
+            <Dependent Role="zanrKnjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Function Name="AktivnostiDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_aktivnosti" Type="int" Mode="In" />
+        </Function>
+        <Function Name="AktivnostiInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_korisnik" Type="int" Mode="In" />
+          <Parameter Name="mess" Type="nvarchar" Mode="In" />
+          <Parameter Name="datum" Type="date" Mode="In" />
+        </Function>
+        <Function Name="AutorDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_autor" Type="int" Mode="In" />
+        </Function>
+        <Function Name="AutorInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ime" Type="nvarchar" Mode="In" />
+          <Parameter Name="prezime" Type="nvarchar" Mode="In" />
+          <Parameter Name="biografija" Type="text" Mode="In" />
+        </Function>
+        <Function Name="KnjigaDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_knjiga" Type="int" Mode="In" />
+        </Function>
+        <Function Name="KnjigaInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_autor" Type="int" Mode="In" />
+          <Parameter Name="id_zanr" Type="int" Mode="In" />
+          <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+          <Parameter Name="slika" Type="nvarchar" Mode="In" />
+          <Parameter Name="slikaMala" Type="nvarchar" Mode="In" />
+          <Parameter Name="godina" Type="nvarchar" Mode="In" />
+          <Parameter Name="opis" Type="nvarchar" Mode="In" />
+          <Parameter Name="cena" Type="int" Mode="In" />
+        </Function>
+        <Function Name="KnjigaUpdate" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_knjiga" Type="int" Mode="In" />
+          <Parameter Name="id_autor" Type="int" Mode="In" />
+          <Parameter Name="id_zanr" Type="int" Mode="In" />
+          <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+          <Parameter Name="slika" Type="nvarchar" Mode="In" />
+          <Parameter Name="slikaMala" Type="nvarchar" Mode="In" />
+          <Parameter Name="godina" Type="nvarchar" Mode="In" />
+          <Parameter Name="opis" Type="nvarchar" Mode="In" />
+          <Parameter Name="cena" Type="int" Mode="In" />
+        </Function>
+        <Function Name="KomentarDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_komentar" Type="int" Mode="In" />
+        </Function>
+        <Function Name="KomentarInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_korisnik" Type="int" Mode="In" />
+          <Parameter Name="id_knjiga" Type="int" Mode="In" />
+          <Parameter Name="komentar" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="KontaktDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_kontakt" Type="int" Mode="In" />
+        </Function>
+        <Function Name="KontaktInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ime" Type="nvarchar" Mode="In" />
+          <Parameter Name="email" Type="nvarchar" Mode="In" />
+          <Parameter Name="naslov" Type="nvarchar" Mode="In" />
+          <Parameter Name="poruka" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="KorisnikDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_korisnik" Type="int" Mode="In" />
+        </Function>
+        <Function Name="KorisnikInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_uloga" Type="int" Mode="In" />
+          <Parameter Name="username" Type="nvarchar" Mode="In" />
+          <Parameter Name="pass" Type="nvarchar" Mode="In" />
+          <Parameter Name="email" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="KorpaDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_knjiga" Type="int" Mode="In" />
+        </Function>
+        <Function Name="KorpaInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_korisnik" Type="int" Mode="In" />
+          <Parameter Name="id_knjiga" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MeniDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_meni" Type="int" Mode="In" />
+        </Function>
+        <Function Name="MeniInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="naslov" Type="nvarchar" Mode="In" />
+          <Parameter Name="url" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="MeniUlogaInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="uloga" Type="nvarchar" Mode="In" />
+        </Function>
+        <Function Name="OcenaInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_knjiga" Type="int" Mode="In" />
+          <Parameter Name="id_korisnik" Type="int" Mode="In" />
+          <Parameter Name="ocena" Type="float" Mode="In" />
+        </Function>
+        <Function Name="ZanrDelete" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="id_zanr" Type="int" Mode="In" />
+        </Function>
+        <Function Name="ZanrInsert" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="naziv" Type="nvarchar" Mode="In" />
+        </Function>
+        <EntityContainer Name="bazaModelStoreContainer">
+          <EntitySet Name="aktivnosti" EntityType="Self.aktivnosti" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="autor" EntityType="Self.autor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="cena" EntityType="Self.cena" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="knjiga" EntityType="Self.knjiga" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="komentar" EntityType="Self.komentar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="kontakt" EntityType="Self.kontakt" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="korisnik" EntityType="Self.korisnik" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="korpa" EntityType="Self.korpa" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="meni" EntityType="Self.meni" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="meniuloga" EntityType="Self.meniuloga" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ocena" EntityType="Self.ocena" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="uloga" EntityType="Self.uloga" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="zanr" EntityType="Self.zanr" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="zanrKnjiga" EntityType="Self.zanrKnjiga" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="aktivnosti_fk0" Association="Self.aktivnosti_fk0">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="aktivnosti" EntitySet="aktivnosti" />
+          </AssociationSet>
+          <AssociationSet Name="cena_fk0" Association="Self.cena_fk0">
+            <End Role="knjiga" EntitySet="knjiga" />
+            <End Role="cena" EntitySet="cena" />
+          </AssociationSet>
+          <AssociationSet Name="knjiga_fk0" Association="Self.knjiga_fk0">
+            <End Role="autor" EntitySet="autor" />
+            <End Role="knjiga" EntitySet="knjiga" />
+          </AssociationSet>
+          <AssociationSet Name="komentar_fk0" Association="Self.komentar_fk0">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="komentar" EntitySet="komentar" />
+          </AssociationSet>
+          <AssociationSet Name="komentar_fk1" Association="Self.komentar_fk1">
+            <End Role="knjiga" EntitySet="knjiga" />
+            <End Role="komentar" EntitySet="komentar" />
+          </AssociationSet>
+          <AssociationSet Name="korisnik_fk0" Association="Self.korisnik_fk0">
+            <End Role="uloga" EntitySet="uloga" />
+            <End Role="korisnik" EntitySet="korisnik" />
+          </AssociationSet>
+          <AssociationSet Name="korpa_fk0" Association="Self.korpa_fk0">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="korpa" EntitySet="korpa" />
+          </AssociationSet>
+          <AssociationSet Name="korpa_fk1" Association="Self.korpa_fk1">
+            <End Role="knjiga" EntitySet="knjiga" />
+            <End Role="korpa" EntitySet="korpa" />
+          </AssociationSet>
+          <AssociationSet Name="mu_fk0" Association="Self.mu_fk0">
+            <End Role="meni" EntitySet="meni" />
+            <End Role="meniuloga" EntitySet="meniuloga" />
+          </AssociationSet>
+          <AssociationSet Name="ocena_fk1" Association="Self.ocena_fk1">
+            <End Role="korisnik" EntitySet="korisnik" />
+            <End Role="ocena" EntitySet="ocena" />
+          </AssociationSet>
+          <AssociationSet Name="zanrKnjiga_fk0" Association="Self.zanrKnjiga_fk0">
+            <End Role="zanr" EntitySet="zanr" />
+            <End Role="zanrKnjiga" EntitySet="zanrKnjiga" />
+          </AssociationSet>
+          <AssociationSet Name="zanrKnjiga_fk1" Association="Self.zanrKnjiga_fk1">
+            <End Role="knjiga" EntitySet="knjiga" />
+            <End Role="zanrKnjiga" EntitySet="zanrKnjiga" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="bazaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="aktivnosti">
+          <Key>
+            <PropertyRef Name="id_aktivnosti" />
+          </Key>
+          <Property Name="id_aktivnosti" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_korisnik" Type="Int32" Nullable="false" />
+          <Property Name="mess" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="korisnik2" Relationship="bazaModel.aktivnosti_fk02" FromRole="aktivnosti" ToRole="korisnik2" />
+        </EntityType>
+        <EntityType Name="cena">
+          <Key>
+            <PropertyRef Name="id_cena" />
+          </Key>
+          <Property Name="id_cena" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_knjiga" Type="Int32" Nullable="false" />
+          <Property Name="cena1" Type="Int32" Nullable="false" />
+          <Property Name="datum" Type="DateTime" Nullable="false" Precision="0" />
+          <NavigationProperty Name="knjiga" Relationship="Self.cena_fk0" FromRole="cena" ToRole="knjiga" />
+        </EntityType>
+        <EntityType Name="knjiga">
+          <Key>
+            <PropertyRef Name="id_knjiga" />
+          </Key>
+          <Property Name="id_knjiga" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_autor" Type="Int32" Nullable="false" />
+          <Property Name="naziv" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="slika" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="godina" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="opis" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="cenas" Relationship="Self.cena_fk0" FromRole="knjiga" ToRole="cena" />
+          <NavigationProperty Name="komentars" Relationship="Self.komentar_fk1" FromRole="knjiga" ToRole="komentar" />
+          <NavigationProperty Name="korpas" Relationship="Self.korpa_fk1" FromRole="knjiga" ToRole="korpa" />
+          <NavigationProperty Name="zanrKnjigas" Relationship="Self.zanrKnjiga_fk1" FromRole="knjiga" ToRole="zanrKnjiga" />
+          <NavigationProperty Name="autor1" Relationship="bazaModel.knjiga_fk01" FromRole="knjiga" ToRole="autor1" />
+          <Property Name="slikaMala" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="komentar">
+          <Key>
+            <PropertyRef Name="id_komentar" />
+          </Key>
+          <Property Name="id_komentar" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_korisnik" Type="Int32" Nullable="false" />
+          <Property Name="id_knjiga" Type="Int32" Nullable="false" />
+          <Property Name="komentar1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="knjiga" Relationship="Self.komentar_fk1" FromRole="komentar" ToRole="knjiga" />
+          <NavigationProperty Name="korisnik2" Relationship="bazaModel.komentar_fk02" FromRole="komentar" ToRole="korisnik2" />
+        </EntityType>
+        <EntityType Name="kontakt">
+          <Key>
+            <PropertyRef Name="id_kontakt" />
+          </Key>
+          <Property Name="id_kontakt" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="email" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="naslov" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="poruka" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="korpa">
+          <Key>
+            <PropertyRef Name="id_korpa" />
+          </Key>
+          <Property Name="id_korpa" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_korisnik" Type="Int32" Nullable="false" />
+          <Property Name="id_knjiga" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="knjiga" Relationship="Self.korpa_fk1" FromRole="korpa" ToRole="knjiga" />
+          <NavigationProperty Name="korisnik2" Relationship="bazaModel.korpa_fk02" FromRole="korpa" ToRole="korisnik2" />
+        </EntityType>
+        <EntityType Name="ocena">
+          <Key>
+            <PropertyRef Name="id_ocena" />
+          </Key>
+          <Property Name="id_ocena" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_knjiga" Type="Int32" Nullable="false" />
+          <Property Name="id_korisnik" Type="Int32" Nullable="false" />
+          <Property Name="ocena1" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="korisnik2" Relationship="bazaModel.ocena_fk12" FromRole="ocena" ToRole="korisnik2" />
+        </EntityType>
+        <EntityType Name="uloga">
+          <Key>
+            <PropertyRef Name="id_uloga" />
+          </Key>
+          <Property Name="id_uloga" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="korisniks2" Relationship="bazaModel.korisnik_fk02" FromRole="uloga" ToRole="korisnik2" />
+        </EntityType>
+        <EntityType Name="zanr">
+          <Key>
+            <PropertyRef Name="id_zanr" />
+          </Key>
+          <Property Name="id_zanr" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naziv" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+          <NavigationProperty Name="zanrKnjigas" Relationship="Self.zanrKnjiga_fk0" FromRole="zanr" ToRole="zanrKnjiga" />
+        </EntityType>
+        <EntityType Name="zanrKnjiga">
+          <Key>
+            <PropertyRef Name="id_zanrKnjiga" />
+          </Key>
+          <Property Name="id_zanrKnjiga" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_zanr" Type="Int32" Nullable="false" />
+          <Property Name="id_knjiga" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="knjiga" Relationship="Self.zanrKnjiga_fk1" FromRole="zanrKnjiga" ToRole="knjiga" />
+          <NavigationProperty Name="zanr" Relationship="Self.zanrKnjiga_fk0" FromRole="zanrKnjiga" ToRole="zanr" />
+        </EntityType>
+        <Association Name="cena_fk0">
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="1" />
+          <End Role="cena" Type="Self.cena" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="knjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Principal>
+            <Dependent Role="cena">
+              <PropertyRef Name="id_knjiga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="komentar_fk1">
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="1" />
+          <End Role="komentar" Type="Self.komentar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="knjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Principal>
+            <Dependent Role="komentar">
+              <PropertyRef Name="id_knjiga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="korpa_fk1">
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="1" />
+          <End Role="korpa" Type="Self.korpa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="knjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Principal>
+            <Dependent Role="korpa">
+              <PropertyRef Name="id_knjiga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="zanrKnjiga_fk1">
+          <End Role="knjiga" Type="Self.knjiga" Multiplicity="1" />
+          <End Role="zanrKnjiga" Type="Self.zanrKnjiga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="knjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Principal>
+            <Dependent Role="zanrKnjiga">
+              <PropertyRef Name="id_knjiga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="zanrKnjiga_fk0">
+          <End Role="zanr" Type="Self.zanr" Multiplicity="1" />
+          <End Role="zanrKnjiga" Type="Self.zanrKnjiga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zanr">
+              <PropertyRef Name="id_zanr" />
+            </Principal>
+            <Dependent Role="zanrKnjiga">
+              <PropertyRef Name="id_zanr" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="bazaEntities" annotation:LazyLoadingEnabled="false">
+          <EntitySet Name="aktivnostis" EntityType="Self.aktivnosti" />
+          <EntitySet Name="cenas" EntityType="Self.cena" />
+          <EntitySet Name="knjigas" EntityType="Self.knjiga" />
+          <EntitySet Name="komentars" EntityType="Self.komentar" />
+          <EntitySet Name="kontakts" EntityType="Self.kontakt" />
+          <EntitySet Name="korpas" EntityType="Self.korpa" />
+          <EntitySet Name="ocenas" EntityType="Self.ocena" />
+          <EntitySet Name="ulogas" EntityType="Self.uloga" />
+          <EntitySet Name="zanrs" EntityType="Self.zanr" />
+          <EntitySet Name="zanrKnjigas" EntityType="Self.zanrKnjiga" />
+          <AssociationSet Name="cena_fk0" Association="Self.cena_fk0">
+            <End Role="knjiga" EntitySet="knjigas" />
+            <End Role="cena" EntitySet="cenas" />
+          </AssociationSet>
+          <AssociationSet Name="komentar_fk1" Association="Self.komentar_fk1">
+            <End Role="knjiga" EntitySet="knjigas" />
+            <End Role="komentar" EntitySet="komentars" />
+          </AssociationSet>
+          <AssociationSet Name="korpa_fk1" Association="Self.korpa_fk1">
+            <End Role="knjiga" EntitySet="knjigas" />
+            <End Role="korpa" EntitySet="korpas" />
+          </AssociationSet>
+          <AssociationSet Name="zanrKnjiga_fk1" Association="Self.zanrKnjiga_fk1">
+            <End Role="knjiga" EntitySet="knjigas" />
+            <End Role="zanrKnjiga" EntitySet="zanrKnjigas" />
+          </AssociationSet>
+          <AssociationSet Name="zanrKnjiga_fk0" Association="Self.zanrKnjiga_fk0">
+            <End Role="zanr" EntitySet="zanrs" />
+            <End Role="zanrKnjiga" EntitySet="zanrKnjigas" />
+          </AssociationSet>
+          <FunctionImport Name="AktivnostiDelete">
+          <Parameter Name="id_aktivnosti" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AktivnostiInsert">
+            <Parameter Name="id_korisnik" Mode="In" Type="Int32" />
+            <Parameter Name="mess" Mode="In" Type="String" />
+            <Parameter Name="datum" Mode="In" Type="DateTime" />
+          </FunctionImport>
+          <FunctionImport Name="AutorDelete">
+          <Parameter Name="id_autor" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="AutorInsert">
+            <Parameter Name="ime" Mode="In" Type="String" />
+            <Parameter Name="prezime" Mode="In" Type="String" />
+            <Parameter Name="biografija" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="KomentarDelete">
+          <Parameter Name="id_komentar" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="KomentarInsert">
+            <Parameter Name="id_korisnik" Mode="In" Type="Int32" />
+            <Parameter Name="id_knjiga" Mode="In" Type="Int32" />
+            <Parameter Name="komentar" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="KontaktDelete">
+          <Parameter Name="id_kontakt" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="KontaktInsert">
+            <Parameter Name="ime" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+            <Parameter Name="naslov" Mode="In" Type="String" />
+            <Parameter Name="poruka" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="KorisnikDelete">
+          <Parameter Name="id_korisnik" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="KorisnikInsert">
+            <Parameter Name="id_uloga" Mode="In" Type="Int32" />
+            <Parameter Name="username" Mode="In" Type="String" />
+            <Parameter Name="pass" Mode="In" Type="String" />
+            <Parameter Name="email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="KorpaDelete">
+          <Parameter Name="id_knjiga" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="KorpaInsert">
+            <Parameter Name="id_korisnik" Mode="In" Type="Int32" />
+            <Parameter Name="id_knjiga" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="MeniDelete">
+          <Parameter Name="id_meni" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="OcenaInsert">
+            <Parameter Name="id_knjiga" Mode="In" Type="Int32" />
+            <Parameter Name="id_korisnik" Mode="In" Type="Int32" />
+            <Parameter Name="ocena" Mode="In" Type="Double" />
+          </FunctionImport>
+          <FunctionImport Name="ZanrDelete">
+          <Parameter Name="id_zanr" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="ZanrInsert">
+          <Parameter Name="naziv" Mode="In" Type="String" />
+          </FunctionImport>
+          <EntitySet Name="korisniks" EntityType="bazaModel.korisnik" />
+          <AssociationSet Name="aktivnosti_fk02" Association="bazaModel.aktivnosti_fk02">
+            <End Role="korisnik2" EntitySet="korisniks" />
+            <End Role="aktivnosti" EntitySet="aktivnostis" />
+          </AssociationSet>
+          <AssociationSet Name="komentar_fk02" Association="bazaModel.komentar_fk02">
+            <End Role="korisnik2" EntitySet="korisniks" />
+            <End Role="komentar" EntitySet="komentars" />
+          </AssociationSet>
+          <AssociationSet Name="korisnik_fk02" Association="bazaModel.korisnik_fk02">
+            <End Role="uloga" EntitySet="ulogas" />
+            <End Role="korisnik2" EntitySet="korisniks" />
+          </AssociationSet>
+          <AssociationSet Name="korpa_fk02" Association="bazaModel.korpa_fk02">
+            <End Role="korisnik2" EntitySet="korisniks" />
+            <End Role="korpa" EntitySet="korpas" />
+          </AssociationSet>
+          <AssociationSet Name="ocena_fk12" Association="bazaModel.ocena_fk12">
+            <End Role="korisnik2" EntitySet="korisniks" />
+            <End Role="ocena" EntitySet="ocenas" />
+          </AssociationSet>
+          <EntitySet Name="autors" EntityType="bazaModel.autor" />
+          <AssociationSet Name="knjiga_fk01" Association="bazaModel.knjiga_fk01">
+            <End Role="autor1" EntitySet="autors" />
+            <End Role="knjiga" EntitySet="knjigas" />
+          </AssociationSet>
+          <FunctionImport Name="KnjigaInsert">
+            <Parameter Name="id_autor" Mode="In" Type="Int32" />
+            <Parameter Name="id_zanr" Mode="In" Type="Int32" />
+            <Parameter Name="naziv" Mode="In" Type="String" />
+            <Parameter Name="slika" Mode="In" Type="String" />
+            <Parameter Name="slikaMala" Mode="In" Type="String" />
+            <Parameter Name="godina" Mode="In" Type="String" />
+            <Parameter Name="opis" Mode="In" Type="String" />
+            <Parameter Name="cena" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="KnjigaUpdate">
+            <Parameter Name="id_knjiga" Mode="In" Type="Int32" />
+            <Parameter Name="id_autor" Mode="In" Type="Int32" />
+            <Parameter Name="id_zanr" Mode="In" Type="Int32" />
+            <Parameter Name="naziv" Mode="In" Type="String" />
+            <Parameter Name="slika" Mode="In" Type="String" />
+            <Parameter Name="slikaMala" Mode="In" Type="String" />
+            <Parameter Name="godina" Mode="In" Type="String" />
+            <Parameter Name="opis" Mode="In" Type="String" />
+            <Parameter Name="cena" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="KnjigaDelete">
+          <Parameter Name="id_knjiga" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <EntitySet Name="menis" EntityType="bazaModel.meni" />
+          <EntitySet Name="meniulogas" EntityType="bazaModel.meniuloga" />
+          <FunctionImport Name="MeniInsert">
+            <Parameter Name="naslov" Mode="In" Type="String" />
+            <Parameter Name="url" Mode="In" Type="String" />
+          </FunctionImport>
+          <AssociationSet Name="mu_fk0" Association="bazaModel.mu_fk0">
+            <End Role="meni" EntitySet="menis" />
+            <End Role="meniuloga" EntitySet="meniulogas" />
+          </AssociationSet>
+          <FunctionImport Name="MeniUlogaInsert">
+          <Parameter Name="uloga" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <EntityType Name="korisnik">
+          <Key>
+            <PropertyRef Name="id_korisnik" />
+          </Key>
+          <Property Name="id_korisnik" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_uloga" Type="Int32" Nullable="false" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="pass" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="aktivnostis" Relationship="bazaModel.aktivnosti_fk02" FromRole="korisnik2" ToRole="aktivnosti" />
+          <NavigationProperty Name="komentars" Relationship="bazaModel.komentar_fk02" FromRole="korisnik2" ToRole="komentar" />
+          <NavigationProperty Name="uloga" Relationship="bazaModel.korisnik_fk02" FromRole="korisnik2" ToRole="uloga" />
+          <NavigationProperty Name="korpas" Relationship="bazaModel.korpa_fk02" FromRole="korisnik2" ToRole="korpa" />
+          <NavigationProperty Name="ocenas" Relationship="bazaModel.ocena_fk12" FromRole="korisnik2" ToRole="ocena" />
+        </EntityType>
+        <Association Name="aktivnosti_fk02">
+          <End Type="bazaModel.korisnik" Role="korisnik2" Multiplicity="1" />
+          <End Type="bazaModel.aktivnosti" Role="aktivnosti" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik2">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="aktivnosti">
+              <PropertyRef Name="id_korisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="komentar_fk02">
+          <End Type="bazaModel.korisnik" Role="korisnik2" Multiplicity="1" />
+          <End Type="bazaModel.komentar" Role="komentar" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik2">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="komentar">
+              <PropertyRef Name="id_korisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="korisnik_fk02">
+          <End Type="bazaModel.uloga" Role="uloga" Multiplicity="1" />
+          <End Type="bazaModel.korisnik" Role="korisnik2" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="uloga">
+              <PropertyRef Name="id_uloga" />
+            </Principal>
+            <Dependent Role="korisnik2">
+              <PropertyRef Name="id_uloga" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="korpa_fk02">
+          <End Type="bazaModel.korisnik" Role="korisnik2" Multiplicity="1" />
+          <End Type="bazaModel.korpa" Role="korpa" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik2">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="korpa">
+              <PropertyRef Name="id_korisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="ocena_fk12">
+          <End Type="bazaModel.korisnik" Role="korisnik2" Multiplicity="1" />
+          <End Type="bazaModel.ocena" Role="ocena" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="korisnik2">
+              <PropertyRef Name="id_korisnik" />
+            </Principal>
+            <Dependent Role="ocena">
+              <PropertyRef Name="id_korisnik" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="autor">
+          <Key>
+            <PropertyRef Name="id_autor" />
+          </Key>
+          <Property Name="id_autor" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ime" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="prezime" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="biografija" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="knjigas" Relationship="bazaModel.knjiga_fk01" FromRole="autor1" ToRole="knjiga" />
+        </EntityType>
+        <Association Name="knjiga_fk01">
+          <End Type="bazaModel.autor" Role="autor1" Multiplicity="1" />
+          <End Type="bazaModel.knjiga" Role="knjiga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="autor1">
+              <PropertyRef Name="id_autor" />
+            </Principal>
+            <Dependent Role="knjiga">
+              <PropertyRef Name="id_autor" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityType Name="meni">
+          <Key>
+            <PropertyRef Name="id_meni" />
+          </Key>
+          <Property Name="id_meni" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="naslov" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="url" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="meniulogas" Relationship="bazaModel.mu_fk0" FromRole="meni" ToRole="meniuloga" />
+        </EntityType>
+        <EntityType Name="meniuloga">
+          <Key>
+            <PropertyRef Name="id_meniuloga" />
+          </Key>
+          <Property Name="id_meniuloga" Type="Int32" Nullable="false" />
+          <Property Name="id_meni" Type="Int32" />
+          <Property Name="uloga" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="meni1" Relationship="bazaModel.mu_fk0" FromRole="meniuloga" ToRole="meni" />
+        </EntityType>
+        <Association Name="mu_fk0">
+          <End Type="bazaModel.meni" Role="meni" Multiplicity="0..1" />
+          <End Type="bazaModel.meniuloga" Role="meniuloga" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="meni">
+              <PropertyRef Name="id_meni" />
+            </Principal>
+            <Dependent Role="meniuloga">
+              <PropertyRef Name="id_meni" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="bazaModelStoreContainer" CdmEntityContainer="bazaEntities">
+          <EntitySetMapping Name="aktivnostis">
+            <EntityTypeMapping TypeName="bazaModel.aktivnosti">
+              <MappingFragment StoreEntitySet="aktivnosti">
+                <ScalarProperty Name="id_aktivnosti" ColumnName="id_aktivnosti" />
+                <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+                <ScalarProperty Name="mess" ColumnName="mess" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cenas">
+            <EntityTypeMapping TypeName="bazaModel.cena">
+              <MappingFragment StoreEntitySet="cena">
+                <ScalarProperty Name="id_cena" ColumnName="id_cena" />
+                <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+                <ScalarProperty Name="cena1" ColumnName="cena" />
+                <ScalarProperty Name="datum" ColumnName="datum" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="knjigas">
+            <EntityTypeMapping TypeName="bazaModel.knjiga">
+              <MappingFragment StoreEntitySet="knjiga">
+                <ScalarProperty Name="slikaMala" ColumnName="slikaMala" />
+                <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+                <ScalarProperty Name="id_autor" ColumnName="id_autor" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+                <ScalarProperty Name="slika" ColumnName="slika" />
+                <ScalarProperty Name="godina" ColumnName="godina" />
+                <ScalarProperty Name="opis" ColumnName="opis" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="komentars">
+            <EntityTypeMapping TypeName="bazaModel.komentar">
+              <MappingFragment StoreEntitySet="komentar">
+                <ScalarProperty Name="id_komentar" ColumnName="id_komentar" />
+                <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+                <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+                <ScalarProperty Name="komentar1" ColumnName="komentar" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="kontakts">
+            <EntityTypeMapping TypeName="bazaModel.kontakt">
+              <MappingFragment StoreEntitySet="kontakt">
+                <ScalarProperty Name="id_kontakt" ColumnName="id_kontakt" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="naslov" ColumnName="naslov" />
+                <ScalarProperty Name="poruka" ColumnName="poruka" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="korpas">
+            <EntityTypeMapping TypeName="bazaModel.korpa">
+              <MappingFragment StoreEntitySet="korpa">
+                <ScalarProperty Name="id_korpa" ColumnName="id_korpa" />
+                <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+                <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ocenas">
+            <EntityTypeMapping TypeName="bazaModel.ocena">
+              <MappingFragment StoreEntitySet="ocena">
+                <ScalarProperty Name="id_ocena" ColumnName="id_ocena" />
+                <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+                <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+                <ScalarProperty Name="ocena1" ColumnName="ocena" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ulogas">
+            <EntityTypeMapping TypeName="bazaModel.uloga">
+              <MappingFragment StoreEntitySet="uloga">
+                <ScalarProperty Name="id_uloga" ColumnName="id_uloga" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zanrs">
+            <EntityTypeMapping TypeName="bazaModel.zanr">
+              <MappingFragment StoreEntitySet="zanr">
+                <ScalarProperty Name="id_zanr" ColumnName="id_zanr" />
+                <ScalarProperty Name="naziv" ColumnName="naziv" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zanrKnjigas">
+            <EntityTypeMapping TypeName="bazaModel.zanrKnjiga">
+              <MappingFragment StoreEntitySet="zanrKnjiga">
+                <ScalarProperty Name="id_zanrKnjiga" ColumnName="id_zanrKnjiga" />
+                <ScalarProperty Name="id_zanr" ColumnName="id_zanr" />
+                <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AktivnostiDelete" FunctionName="bazaModel.Store.AktivnostiDelete" />
+          <FunctionImportMapping FunctionImportName="AktivnostiInsert" FunctionName="bazaModel.Store.AktivnostiInsert" />
+          <FunctionImportMapping FunctionImportName="AutorDelete" FunctionName="bazaModel.Store.AutorDelete" />
+          <FunctionImportMapping FunctionImportName="AutorInsert" FunctionName="bazaModel.Store.AutorInsert" />
+          <FunctionImportMapping FunctionImportName="KomentarDelete" FunctionName="bazaModel.Store.KomentarDelete" />
+          <FunctionImportMapping FunctionImportName="KomentarInsert" FunctionName="bazaModel.Store.KomentarInsert" />
+          <FunctionImportMapping FunctionImportName="KontaktDelete" FunctionName="bazaModel.Store.KontaktDelete" />
+          <FunctionImportMapping FunctionImportName="KontaktInsert" FunctionName="bazaModel.Store.KontaktInsert" />
+          <FunctionImportMapping FunctionImportName="KorisnikDelete" FunctionName="bazaModel.Store.KorisnikDelete" />
+          <FunctionImportMapping FunctionImportName="KorisnikInsert" FunctionName="bazaModel.Store.KorisnikInsert" />
+          <FunctionImportMapping FunctionImportName="KorpaDelete" FunctionName="bazaModel.Store.KorpaDelete" />
+          <FunctionImportMapping FunctionImportName="KorpaInsert" FunctionName="bazaModel.Store.KorpaInsert" />
+          <FunctionImportMapping FunctionImportName="MeniDelete" FunctionName="bazaModel.Store.MeniDelete" />
+          <FunctionImportMapping FunctionImportName="OcenaInsert" FunctionName="bazaModel.Store.OcenaInsert" />
+          <FunctionImportMapping FunctionImportName="ZanrDelete" FunctionName="bazaModel.Store.ZanrDelete" />
+          <FunctionImportMapping FunctionImportName="ZanrInsert" FunctionName="bazaModel.Store.ZanrInsert" />
+          <EntitySetMapping Name="korisniks">
+            <EntityTypeMapping TypeName="bazaModel.korisnik">
+              <MappingFragment StoreEntitySet="korisnik">
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="pass" ColumnName="pass" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="id_uloga" ColumnName="id_uloga" />
+                <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="autors">
+            <EntityTypeMapping TypeName="bazaModel.autor">
+              <MappingFragment StoreEntitySet="autor">
+                <ScalarProperty Name="biografija" ColumnName="biografija" />
+                <ScalarProperty Name="prezime" ColumnName="prezime" />
+                <ScalarProperty Name="ime" ColumnName="ime" />
+                <ScalarProperty Name="id_autor" ColumnName="id_autor" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="KnjigaInsert" FunctionName="bazaModel.Store.KnjigaInsert" />
+          <FunctionImportMapping FunctionImportName="KnjigaUpdate" FunctionName="bazaModel.Store.KnjigaUpdate" />
+          <FunctionImportMapping FunctionImportName="KnjigaDelete" FunctionName="bazaModel.Store.KnjigaDelete" />
+          <EntitySetMapping Name="menis">
+            <EntityTypeMapping TypeName="bazaModel.meni">
+              <MappingFragment StoreEntitySet="meni">
+                <ScalarProperty Name="url" ColumnName="url" />
+                <ScalarProperty Name="naslov" ColumnName="naslov" />
+                <ScalarProperty Name="id_meni" ColumnName="id_meni" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="meniulogas">
+            <EntityTypeMapping TypeName="bazaModel.meniuloga">
+              <MappingFragment StoreEntitySet="meniuloga">
+                <ScalarProperty Name="uloga" ColumnName="uloga" />
+                <ScalarProperty Name="id_meni" ColumnName="id_meni" />
+                <ScalarProperty Name="id_meniuloga" ColumnName="id_meniuloga" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="MeniInsert" FunctionName="bazaModel.Store.MeniInsert" />
+          <FunctionImportMapping FunctionImportName="MeniUlogaInsert" FunctionName="bazaModel.Store.MeniUlogaInsert" />
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

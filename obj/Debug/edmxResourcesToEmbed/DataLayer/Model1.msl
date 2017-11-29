@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bazaModelStoreContainer" CdmEntityContainer="bazaEntities">
+    <EntitySetMapping Name="aktivnostis">
+      <EntityTypeMapping TypeName="bazaModel.aktivnosti">
+        <MappingFragment StoreEntitySet="aktivnosti">
+          <ScalarProperty Name="id_aktivnosti" ColumnName="id_aktivnosti" />
+          <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+          <ScalarProperty Name="mess" ColumnName="mess" />
+          <ScalarProperty Name="datum" ColumnName="datum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cenas">
+      <EntityTypeMapping TypeName="bazaModel.cena">
+        <MappingFragment StoreEntitySet="cena">
+          <ScalarProperty Name="id_cena" ColumnName="id_cena" />
+          <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+          <ScalarProperty Name="cena1" ColumnName="cena" />
+          <ScalarProperty Name="datum" ColumnName="datum" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="knjigas">
+      <EntityTypeMapping TypeName="bazaModel.knjiga">
+        <MappingFragment StoreEntitySet="knjiga">
+          <ScalarProperty Name="slikaMala" ColumnName="slikaMala" />
+          <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+          <ScalarProperty Name="id_autor" ColumnName="id_autor" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+          <ScalarProperty Name="slika" ColumnName="slika" />
+          <ScalarProperty Name="godina" ColumnName="godina" />
+          <ScalarProperty Name="opis" ColumnName="opis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="komentars">
+      <EntityTypeMapping TypeName="bazaModel.komentar">
+        <MappingFragment StoreEntitySet="komentar">
+          <ScalarProperty Name="id_komentar" ColumnName="id_komentar" />
+          <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+          <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+          <ScalarProperty Name="komentar1" ColumnName="komentar" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="kontakts">
+      <EntityTypeMapping TypeName="bazaModel.kontakt">
+        <MappingFragment StoreEntitySet="kontakt">
+          <ScalarProperty Name="id_kontakt" ColumnName="id_kontakt" />
+          <ScalarProperty Name="ime" ColumnName="ime" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="naslov" ColumnName="naslov" />
+          <ScalarProperty Name="poruka" ColumnName="poruka" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="korpas">
+      <EntityTypeMapping TypeName="bazaModel.korpa">
+        <MappingFragment StoreEntitySet="korpa">
+          <ScalarProperty Name="id_korpa" ColumnName="id_korpa" />
+          <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+          <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ocenas">
+      <EntityTypeMapping TypeName="bazaModel.ocena">
+        <MappingFragment StoreEntitySet="ocena">
+          <ScalarProperty Name="id_ocena" ColumnName="id_ocena" />
+          <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+          <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+          <ScalarProperty Name="ocena1" ColumnName="ocena" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ulogas">
+      <EntityTypeMapping TypeName="bazaModel.uloga">
+        <MappingFragment StoreEntitySet="uloga">
+          <ScalarProperty Name="id_uloga" ColumnName="id_uloga" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zanrs">
+      <EntityTypeMapping TypeName="bazaModel.zanr">
+        <MappingFragment StoreEntitySet="zanr">
+          <ScalarProperty Name="id_zanr" ColumnName="id_zanr" />
+          <ScalarProperty Name="naziv" ColumnName="naziv" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zanrKnjigas">
+      <EntityTypeMapping TypeName="bazaModel.zanrKnjiga">
+        <MappingFragment StoreEntitySet="zanrKnjiga">
+          <ScalarProperty Name="id_zanrKnjiga" ColumnName="id_zanrKnjiga" />
+          <ScalarProperty Name="id_zanr" ColumnName="id_zanr" />
+          <ScalarProperty Name="id_knjiga" ColumnName="id_knjiga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="AktivnostiDelete" FunctionName="bazaModel.Store.AktivnostiDelete" />
+    <FunctionImportMapping FunctionImportName="AktivnostiInsert" FunctionName="bazaModel.Store.AktivnostiInsert" />
+    <FunctionImportMapping FunctionImportName="AutorDelete" FunctionName="bazaModel.Store.AutorDelete" />
+    <FunctionImportMapping FunctionImportName="AutorInsert" FunctionName="bazaModel.Store.AutorInsert" />
+    <FunctionImportMapping FunctionImportName="KomentarDelete" FunctionName="bazaModel.Store.KomentarDelete" />
+    <FunctionImportMapping FunctionImportName="KomentarInsert" FunctionName="bazaModel.Store.KomentarInsert" />
+    <FunctionImportMapping FunctionImportName="KontaktDelete" FunctionName="bazaModel.Store.KontaktDelete" />
+    <FunctionImportMapping FunctionImportName="KontaktInsert" FunctionName="bazaModel.Store.KontaktInsert" />
+    <FunctionImportMapping FunctionImportName="KorisnikDelete" FunctionName="bazaModel.Store.KorisnikDelete" />
+    <FunctionImportMapping FunctionImportName="KorisnikInsert" FunctionName="bazaModel.Store.KorisnikInsert" />
+    <FunctionImportMapping FunctionImportName="KorpaDelete" FunctionName="bazaModel.Store.KorpaDelete" />
+    <FunctionImportMapping FunctionImportName="KorpaInsert" FunctionName="bazaModel.Store.KorpaInsert" />
+    <FunctionImportMapping FunctionImportName="MeniDelete" FunctionName="bazaModel.Store.MeniDelete" />
+    <FunctionImportMapping FunctionImportName="OcenaInsert" FunctionName="bazaModel.Store.OcenaInsert" />
+    <FunctionImportMapping FunctionImportName="ZanrDelete" FunctionName="bazaModel.Store.ZanrDelete" />
+    <FunctionImportMapping FunctionImportName="ZanrInsert" FunctionName="bazaModel.Store.ZanrInsert" />
+    <EntitySetMapping Name="korisniks">
+      <EntityTypeMapping TypeName="bazaModel.korisnik">
+        <MappingFragment StoreEntitySet="korisnik">
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="pass" ColumnName="pass" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="id_uloga" ColumnName="id_uloga" />
+          <ScalarProperty Name="id_korisnik" ColumnName="id_korisnik" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="autors">
+      <EntityTypeMapping TypeName="bazaModel.autor">
+        <MappingFragment StoreEntitySet="autor">
+          <ScalarProperty Name="biografija" ColumnName="biografija" />
+          <ScalarProperty Name="prezime" ColumnName="prezime" />
+          <ScalarProperty Name="ime" ColumnName="ime" />
+          <ScalarProperty Name="id_autor" ColumnName="id_autor" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="KnjigaInsert" FunctionName="bazaModel.Store.KnjigaInsert" />
+    <FunctionImportMapping FunctionImportName="KnjigaUpdate" FunctionName="bazaModel.Store.KnjigaUpdate" />
+    <FunctionImportMapping FunctionImportName="KnjigaDelete" FunctionName="bazaModel.Store.KnjigaDelete" />
+    <EntitySetMapping Name="menis">
+      <EntityTypeMapping TypeName="bazaModel.meni">
+        <MappingFragment StoreEntitySet="meni">
+          <ScalarProperty Name="url" ColumnName="url" />
+          <ScalarProperty Name="naslov" ColumnName="naslov" />
+          <ScalarProperty Name="id_meni" ColumnName="id_meni" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="meniulogas">
+      <EntityTypeMapping TypeName="bazaModel.meniuloga">
+        <MappingFragment StoreEntitySet="meniuloga">
+          <ScalarProperty Name="uloga" ColumnName="uloga" />
+          <ScalarProperty Name="id_meni" ColumnName="id_meni" />
+          <ScalarProperty Name="id_meniuloga" ColumnName="id_meniuloga" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="MeniInsert" FunctionName="bazaModel.Store.MeniInsert" />
+    <FunctionImportMapping FunctionImportName="MeniUlogaInsert" FunctionName="bazaModel.Store.MeniUlogaInsert" />
+  </EntityContainerMapping>
+</Mapping>

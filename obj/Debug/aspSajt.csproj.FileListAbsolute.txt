@@ -1,0 +1,108 @@
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\ApplicationInsights.config
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\csc.exe
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\vbc.exe
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\VBCSCompiler.exe
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\aspSajt.dll.config
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\aspSajt.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\aspSajt.pdb
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\BeginCollectionItem.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\EntityFramework.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.Web.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\PagedList.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\PagedList.Mvc.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.WebPages.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.Mvc.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.Razor.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.WebPages.Razor.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\EntityFramework.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.Web.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\PagedList.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\PagedList.Mvc.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.WebPages.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.Mvc.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.Razor.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\bin\System.Web.WebPages.Razor.xml
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\obj\Debug\aspSajt.dll
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\obj\Debug\aspSajt.pdb
+C:\Users\Milos Djacic\Documents\Visual Studio 2015\Projects\aspSajt\aspSajt\obj\Debug\aspSajt.csprojResolveAssemblyReference.cache
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\ApplicationInsights.config
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\csc.exe
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\vbc.exe
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\VBCSCompiler.exe
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\aspSajt.dll.config
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\aspSajt.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\aspSajt.pdb
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\BeginCollectionItem.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\EntityFramework.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.Web.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\PagedList.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\PagedList.Mvc.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.WebPages.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.Mvc.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.Razor.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.WebPages.Razor.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\EntityFramework.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.Web.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\PagedList.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\PagedList.Mvc.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.WebPages.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.Mvc.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\Microsoft.Web.Infrastructure.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.Razor.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\bin\System.Web.WebPages.Razor.xml
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\obj\Debug\aspSajt.csprojResolveAssemblyReference.cache
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\obj\Debug\aspSajt.dll
+C:\Users\Milos Djacic\Desktop\CUT 2\CUT\aspSajt\aspSajt\obj\Debug\aspSajt.pdb

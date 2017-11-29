@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="bb99566820324b1ca16734f1d59049e6" Name="Diagram1" ZoomLevel="99">
+        <EntityTypeShape EntityType="bazaModel.aktivnosti" Width="1.5" PointX="5.25" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.cena" Width="1.5" PointX="5.25" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.knjiga" Width="1.5" PointX="3" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.komentar" Width="1.5" PointX="5.25" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.kontakt" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.korpa" Width="1.5" PointX="5.25" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.ocena" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.uloga" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.zanr" Width="1.5" PointX="6" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="bazaModel.zanrKnjiga" Width="1.5" PointX="8.25" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="bazaModel.cena_fk0" ManuallyRouted="false" />
+        <AssociationConnector Association="bazaModel.komentar_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="bazaModel.korpa_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="bazaModel.zanrKnjiga_fk1" ManuallyRouted="false" />
+        <AssociationConnector Association="bazaModel.zanrKnjiga_fk0" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="bazaModel.korisnik" Width="1.5" PointX="3" PointY="11" />
+        <AssociationConnector Association="bazaModel.aktivnosti_fk02" />
+        <AssociationConnector Association="bazaModel.komentar_fk02" />
+        <AssociationConnector Association="bazaModel.korisnik_fk02" />
+        <AssociationConnector Association="bazaModel.korpa_fk02" />
+        <AssociationConnector Association="bazaModel.ocena_fk12" />
+        <EntityTypeShape EntityType="bazaModel.autor" Width="1.5" PointX="0.75" PointY="10.375" />
+        <AssociationConnector Association="bazaModel.knjiga_fk01" />
+        <EntityTypeShape EntityType="bazaModel.meni" Width="1.5" PointX="0.5" PointY="0.625" />
+        <EntityTypeShape EntityType="bazaModel.meniuloga" Width="1.5" PointX="3.75" PointY="1.375" />
+        <AssociationConnector Association="bazaModel.mu_fk0" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
